@@ -1,4 +1,4 @@
-package dev.chrisyx511.cs1.helloworld.mathOps;
+package dev.chrisyx511.cs1.helloworld;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
