@@ -12,7 +12,8 @@ public class Main {
         user.lastName = input.nextLine();
 
         System.out.println("Hello, " + user.returnFullName().toLowerCase() + "!");
-        System.out.println(user.firstName.equalsIgnoreCase(user.lastName));
-
+        System.out.println(user.firstName.compareTo(user.lastName));
+        int test = user.returnFullName().indexOf('e', 3);
+        System.out.println(test);
     }
 }

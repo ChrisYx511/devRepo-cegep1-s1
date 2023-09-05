@@ -5,6 +5,6 @@ public class Person {
     String firstName;
 
     public String returnFullName() {
-        return (firstName + " " + lastName);
+        return (firstName.trim() + " " + lastName.trim());
     }
 }
