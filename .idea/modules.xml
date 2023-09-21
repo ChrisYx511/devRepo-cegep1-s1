@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AcceptInput/AcceptInput.iml" filepath="$PROJECT_DIR$/AcceptInput/AcceptInput.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataTypes/DataTypes.iml" filepath="$PROJECT_DIR$/DataTypes/DataTypes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hello World/Hello World.iml" filepath="$PROJECT_DIR$/Hello World/Hello World.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IfElseNumberComparison/IfElseNumberComparison.iml" filepath="$PROJECT_DIR$/IfElseNumberComparison/IfElseNumberComparison.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Intro to Programming - Class.iml" filepath="$PROJECT_DIR$/Intro to Programming - Class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Introduction to Programming - Assign 1/Introduction to Programming - Assign 1.iml" filepath="$PROJECT_DIR$/Introduction to Programming - Assign 1/Introduction to Programming - Assign 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroductionProgram/IntroductionProgram.iml" filepath="$PROJECT_DIR$/IntroductionProgram/IntroductionProgram.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PrintAndStringFormating/PrintAndStringFormating.iml" filepath="$PROJECT_DIR$/PrintAndStringFormating/PrintAndStringFormating.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringManipulation2/StringManipulation2.iml" filepath="$PROJECT_DIR$/StringManipulation2/StringManipulation2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringManipulationExercises/StringManipulationExercises.iml" filepath="$PROJECT_DIR$/StringManipulationExercises/StringManipulationExercises.iml" />
+    </modules>
+  </component>
+</project>
