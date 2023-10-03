@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BankNotes {
     public static void main(String[] args) {
         // Take and sort user input
-        Scanner userInputObject = new Scanner(System.in);
+        final Scanner userInputObject = new Scanner(System.in);
         System.out.println("Enter an amount: ");
         double userAmount = userInputObject.nextDouble();
 
@@ -19,6 +19,8 @@ public class BankNotes {
         remainder = remainder % 10;
         int amountOf5 = (int) (remainder/5);
         remainder = remainder % 5;
+        int amountOf2 = (int) (remainder/2);
+        remainder = remainder % 2;
         int amountOf1 = (int) (remainder);
         remainder = remainder % 1;
         int amountOf25cent = (int) (remainder/0.25);
@@ -27,8 +29,14 @@ public class BankNotes {
         remainder = remainder % 0.10;
         int amountOf5cent = (int) (remainder/0.05);
         remainder = remainder % 0.05;
-
-        System.out.printf("%d, %d, %d, %d, %d, %d, %d, %d, %d",
-                amountOf100, amountOf50, amountOf20, amountOf10, amountOf5, amountOf1, amountOf25cent, amountOf10cent, amountOf5cent);
+        if (remainder > 0.025) {
+            amountOf5cent++;
         }
+
+        System.out.printf("$100 notes: %d,%n $50 Notes: %d,%n $20 Notes: %d,%n $10 Notes: %d,%n $5 Notes: %d,%n $2 Coin: %d,%n $1 Coin: %d,%n 25-Cent Coin: %d,%n 10-Cent Coin: %d,%n 5-Cent Coin: %d %n",
+                amountOf100, amountOf50, amountOf20, amountOf10, amountOf5, amountOf2, amountOf1, amountOf25cent, amountOf10cent, amountOf5cent);
+        userInputObject.close();
+
+    }
+
 }

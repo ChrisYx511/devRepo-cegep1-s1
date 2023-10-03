@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="494cc7fe-312e-4d6f-bd29-50f2d4188b6b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../CLASS-09-21--Exercises/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASS-09-21--Exercises/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASS-09-21--Exercises/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASS-09-21--Exercises/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASS-09-21--Exercises/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASS-09-21--Exercises/CLASS-09-21--Exercises.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASS-09-21--Exercises/src/dev/chrisyx511/cs1/exercises0921/Exercise1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASS-09-21--Exercises/src/dev/chrisyx511/cs1/exercises0921/Exercise2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASS-09-21--Exercises/src/dev/chrisyx511/cs1/exercises0921/Exercise3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASS-09-21--Exercises/src/dev/chrisyx511/cs1/exercises0921/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASS-09-21--Exercises/src/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Class-09-26--Loops1/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Class-09-26--Loops1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Class-09-26--Loops1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Class-09-26--Loops1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Class-09-26--Loops1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Class-09-26--Loops1/Class-09-26--Loops1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Class-09-26--Loops1/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Class-09-26--Loops1/src/MultiplicationTables.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Class-09-26--Loops1/src/Notes.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class-09-28--Loops2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops2/Exercise1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops2/Exercise2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops2/Exercise3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops2/Exercise4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops2/Exercise5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLASS-LogicalOperators-09-19/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CLASS-LogicalOperators-09-19/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DataTypes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DataTypes/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IfElseNumberComparison/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IfElseNumberComparison/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IfElseNumberComparison/src/dev/chrisyx511/cs1/ifelse1/BankNotes.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IfElseNumberComparison/src/dev/chrisyx511/cs1/ifelse1/BankNotes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StringManipulationExercises/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StringManipulationExercises/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2W2BnrYWR4CYNkOcCp4sVilRaVL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="494cc7fe-312e-4d6f-bd29-50f2d4188b6b" name="Changes" comment="" />
+      <created>1695920966338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695920966338</updated>
+      <workItem from="1695920967346" duration="8326000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.Error" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
