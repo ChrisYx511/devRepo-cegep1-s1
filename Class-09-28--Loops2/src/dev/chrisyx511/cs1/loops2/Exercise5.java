@@ -19,5 +19,6 @@ public class Exercise5 {
         } else {
             System.out.println("Is not prime!");
         }
+        userInputObj.close();
     }
 }

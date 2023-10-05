@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="494cc7fe-312e-4d6f-bd29-50f2d4188b6b" name="Changes" comment="">
+    <list default="true" id="8f49f5f7-9f35-46a1-b6d6-9a94c7fd3cab" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/ASSIGN-10-07--Assignment2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/Assignment 2.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/Assignment_2.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/src/dev/chrisyx511/cs1/Assignment2/Answer1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assignment 2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops2/Exercise5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops2/Exercise5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class-09-28--Loops2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Class-09-28--Loops2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class-09-28--Loops2/src/dev/chrisyx511/cs1/loops2/Exercise5.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Class-09-28--Loops2/src/dev/chrisyx511/cs1/loops2/Exercise5.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,33 +31,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ChrisYx511"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="7c8a2a64-5aa1-448a-b894-c6cd47e65391" />
-        <option name="url" value="https://github.com/ChrisYx511/devRepo-cegep1-s1.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
+  "associatedIndex": 7
 }]]></component>
-  <component name="ProjectId" id="2W2BnrYWR4CYNkOcCp4sVilRaVL" />
+  <component name="ProjectId" id="2WGlEob5kNn3AsRNk8kLYqMmqUj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -74,63 +62,19 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="494cc7fe-312e-4d6f-bd29-50f2d4188b6b" name="Changes" comment="" />
-      <created>1695920966338</created>
+      <changelist id="8f49f5f7-9f35-46a1-b6d6-9a94c7fd3cab" name="Changes" comment="" />
+      <created>1696366690713</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695920966338</updated>
-      <workItem from="1695920967346" duration="10425000" />
+      <updated>1696366690713</updated>
+      <workItem from="1696366691789" duration="1014000" />
     </task>
-    <task id="LOCAL-00001" summary="Updated Oct 3 Class - 1">
-      <option name="closed" value="true" />
-      <created>1696366143057</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1696366143057</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added README.MD" />
-    <MESSAGE value="Updated Oct 3 Class - 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Oct 3 Class - 1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint type="java-exception">
-          <properties class="java.lang.Error" package="java.lang" />
-          <option name="timeStamp" value="3" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
