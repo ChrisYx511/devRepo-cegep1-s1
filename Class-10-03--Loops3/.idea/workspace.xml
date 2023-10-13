@@ -4,31 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e976e5-8f32-498b-a623-b23ad9249e2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/ASSIGN-10-07--Assignment2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/Assignment_2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/src/dev/chrisyx511/cs1/Assignment2/Answer1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assignment 2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Class-10-03--Loops3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops3/Exercise1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops3/Exercise2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops3/Exercise3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops3/Exercise4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops3/Exercise5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops3/Exercise6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops3/Exercise7.java" afterDir="false" />
+    <list default="true" id="62e976e5-8f32-498b-a623-b23ad9249e2f" name="Changes" comment="Oct5">
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/Assignment2-Answers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/src/dev/chrisyx511/cs1/Assignment2/Answer2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/src/dev/chrisyx511/cs1/Assignment2/Answer3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops3/Exercise8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops3/Exercise9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/src/dev/chrisyx511/cs1/Assignment2/Answer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/src/dev/chrisyx511/cs1/Assignment2/Answer1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 2/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Class-09-28--Loops2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Class-09-28--Loops2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Class-09-28--Loops2/src/dev/chrisyx511/cs1/loops2/Exercise5.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Class-09-28--Loops2/src/dev/chrisyx511/cs1/loops2/Exercise5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +31,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2WGo3YGJbaedmvCHAMo9jIQOGmt" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -56,24 +42,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -82,11 +68,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696368080513</updated>
-      <workItem from="1696368081530" duration="9968000" />
+      <workItem from="1696368081530" duration="14833000" />
+      <workItem from="1696722113880" duration="694000" />
     </task>
+    <task id="LOCAL-00001" summary="Oct5">
+      <option name="closed" value="true" />
+      <created>1696535058632</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696535058632</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Oct5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Oct5" />
   </component>
 </project>

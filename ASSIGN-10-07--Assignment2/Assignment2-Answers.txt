@@ -1,0 +1,179 @@
+/*
+ * Xi Yang
+ * Mehdi Farshid Farzad
+ * Introduction to Programming
+ * 7 Oct 2023
+ * -- Assignment 2 --
+ * */
+
+// --------------------------------- //
+
+/*
+ * Assignment 2 - Question 1
+ *
+ * Q1: User input amounts in 2 bank accounts with different interest rates, check when CIBC account >= RBC and output amounts
+ * in each account.
+ * A3:
+ * Input: 4 Double
+ * Output: Formatting String + 1 Int and 2 Double
+ * */
+import java.util.Scanner;
+
+public class Answer1 {
+    public static void main(String[] args) {
+        final Scanner inputObj = new Scanner(System.in);
+        // Get input from the user
+        System.out.print("Enter CA$ amount deposited in RBC: ");
+        double rbcAmountDouble = inputObj.nextDouble();
+        System.out.print("Enter CA$ amount deposited in CIBC: ");
+        double cibcAmountDouble = inputObj.nextDouble();
+        System.out.print("Enter the interest rate of RBC: ");
+        final double rbcInterestDouble = inputObj.nextDouble();
+        System.out.print("Enter the interest rate of CIBC: ");
+        final double cibcInterestDouble = inputObj.nextDouble();
+
+        // Recurse interest accumulation until cibcAmountDouble >= rbcAmountDouble
+        int numberOfYears = 0;
+        while (cibcAmountDouble <= rbcAmountDouble) {
+            rbcAmountDouble += rbcAmountDouble * rbcInterestDouble / 100;
+            cibcAmountDouble += cibcAmountDouble * cibcInterestDouble / 100;
+            numberOfYears++;
+        }
+
+        // Output formatted data
+        System.out.printf("                 Analysis Result          %n" +
+                "               -------------------          %n"
+                + "After %d year(s), the balance in CIBC will be >= to RBC.%n" +
+                "After %d year(s), the balance in RBC is CA$ %.2f%n" +
+                "After %d year(s), the balance in CIBC is CA$ %.2f",
+                numberOfYears, numberOfYears, rbcAmountDouble, numberOfYears, cibcAmountDouble
+        );
+    }
+
+}
+
+// --------------------------------- //
+
+/*
+ * Assignment 2 - Question 2
+ *
+ * Q2: Capitalize every first letter of every word in a sentence
+ * A2:
+ * Input: 1 String
+ * Output: 1 String
+ * */
+import java.util.Scanner;
+
+public class Answer2 {
+    /**
+     * Constant defining a space character
+     */
+    final private static char SPACE_CHARACTER = ' ';
+    public static void main(String[] args) {
+
+        // Get input from user
+        final Scanner inputObj = new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        final String userSentenceStr = inputObj.nextLine();
+
+        // Capitalize first character and provide sentence for loop to work with
+        String outputSentenceStr = userSentenceStr.substring(0,1).toUpperCase() + userSentenceStr.substring(1);
+
+        // Loop through remaining characters of the sentence, capitalizing any character following a space
+        for (int i = 1; i < outputSentenceStr.length(); i++) {
+            if (checkForPrecedingSpace(outputSentenceStr, i)) {
+                outputSentenceStr = outputSentenceStr.substring(0,i) + outputSentenceStr.substring(i, i + 1).toUpperCase() + outputSentenceStr.substring(i + 1);
+            }
+
+        }
+        // Output the finalized sentence
+        System.out.println(outputSentenceStr);
+
+    }
+    /**
+     * Method to check if the preceding character is a space, returning true if it is a space
+     * @param fullString Entire string in which the character is located
+     * @param indexOfChar Positive integer representing the index of the character in fullString
+     * @return <code>true</code> if the preceding character is a space, <code>false</code> if not
+     */
+    private static boolean checkForPrecedingSpace(String fullString, int indexOfChar) {
+        char precedingChar = fullString.charAt(indexOfChar - 1);
+        return (precedingChar == SPACE_CHARACTER);
+    }
+
+}
+
+// --------------------------------- //
+
+/*
+ * Assignment 2 - Question 3
+ *
+ * Q3: Resolve the mathematical expression as described in the assignment handout
+ * A3:
+ * Input: 1 Integer
+ * Output: 1 Double
+ * */
+import java.util.Scanner;
+
+public class Answer3 {
+    public static void main(String[] args) {
+        // Get user input
+        final Scanner inputObj = new Scanner(System.in);
+        System.out.print("Enter the n: ");
+        final int userInputValueInt = inputObj.nextInt();
+        // Declare final result variable
+        double finalValueDouble = 0;
+        // Declare flag to determine sign
+        boolean signIsPlusBool = false;
+        // In increments of 2, execute the addition or the subtraction depending on signIsPlusBool
+        for (int i = 1; i <= userInputValueInt; i += 2) {
+            // Check for i == 1 because first operation is always positive
+            if (signIsPlusBool || i == 1) {
+                finalValueDouble += (double) getPositiveExponent(i,(i+1)) / getFactorial(i+1);
+                //System.out.println(finalValueDouble);
+            } else {
+                finalValueDouble -= (double) getPositiveExponent(i,(i+1)) / getFactorial(i+1);
+                //System.out.println(finalValueDouble);
+            }
+            signIsPlusBool = !signIsPlusBool;
+
+        }
+        // Output result
+        System.out.println("Result = " + finalValueDouble);
+
+    }
+
+    /**
+     * Method to return the factorial of the first argument, positive integer originalValue.
+     * @param originalValue The value to which the factorial operation is applied
+     * @return Result of the factorial operation (originalValue!)
+      */
+    private static long getFactorial(int originalValue) {
+        long outputValue = originalValue;
+        for (int i = 2; i < originalValue; i++ ) {
+            outputValue = outputValue * i;
+        }
+
+        return outputValue;
+    }
+
+    /**
+     * Method to return the value of the first argument, as long as it is a positive integer, raised to the power of the second argument,
+     * also a positive integer.
+     * @param base The base used to find the exponential value
+     * @param exponent The exponent to which the result is calculated
+     * @return Result of the exponentiation operation (base ^ exponent)
+     */
+    private static long getPositiveExponent(int base, int exponent) {
+        long result = base;
+        for (int i = 2; i <= exponent; i++) {
+            result = result * base;
+        }
+        if (exponent == 0) {
+            result = 1;
+        }
+        return result;
+
+    }
+}
+
