@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f49f5f7-9f35-46a1-b6d6-9a94c7fd3cab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assignment2-Answers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/Assignment2/Answer2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/Assignment2/Answer3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Class-10-03--Loops3/src/dev/chrisyx511/cs1/loops3/Exercise8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Class-10-03--Loops3/src/dev/chrisyx511/cs1/loops3/Exercise9.java" afterDir="false" />
+    <list default="true" id="8f49f5f7-9f35-46a1-b6d6-9a94c7fd3cab" name="Changes" comment="Updated stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/Assignment2/Answer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/Assignment2/Answer1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment 2/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Class-09-28--Loops2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Class-09-28--Loops2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Class-10-03--Loops3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Class-10-03--Loops3/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +22,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ChrisYx511&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="7c8a2a64-5aa1-448a-b894-c6cd47e65391" />
+        <option name="url" value="https://github.com/ChrisYx511/devRepo-cegep1-s1.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -39,24 +44,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/chrisyx511/Documents/Code/Intro to Programming - Class/ASSIGN-10-07--Assignment2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/chrisyx511/Documents/Code/Intro to Programming - Class/ASSIGN-10-07--Assignment2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -72,10 +77,36 @@
       <updated>1696366690713</updated>
       <workItem from="1696366691789" duration="699000" />
       <workItem from="1696367709312" duration="21538000" />
+      <workItem from="1697231097169" duration="28000" />
+      <workItem from="1697579764560" duration="44000" />
     </task>
+    <task id="LOCAL-00001" summary="Updated stuff">
+      <option name="closed" value="true" />
+      <created>1697231119578</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697231119578</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated stuff" />
   </component>
 </project>
