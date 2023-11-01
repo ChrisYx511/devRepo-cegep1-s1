@@ -1,0 +1,188 @@
+package dev.chrisyx511.cs1.assignment3;
+/*
+    (Chris) Xi Yang
+    Mehdi Farshid Farzad
+    Introduction to Programming
+    5 November 2023
+
+    -- Assignment 3 --
+ */
+import java.util.Scanner;
+
+public class Main {
+    // Menu Layout
+    final static String menuContent = "Menu\n" +
+                                      "1- Show the number of vowels\n" +
+                                      "2- Show the number of words\n" +
+                                      "3- Delete by word and show\n" +
+                                      "4- Delete by number and show\n" +
+                                      "5- Exit\n";
+
+    public static void main(String[] args) {
+        // User Input
+        final Scanner userInput = new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        final StringToolkit userSentence = new StringToolkit(userInput.nextLine());
+
+        // Parse User Choice, exiting if the choice is 5
+        int userChoice = 1;
+        while (userChoice != 5) {
+            // Get User Choice from Input
+            System.out.println("\nSentence: " + userSentence.value);
+            System.out.println(menuContent);
+            System.out.print("Select Option: ");
+            userChoice = userInput.nextInt();
+            userInput.nextLine();
+
+            // Check for Invalid Input
+            if (userChoice > 5 || userChoice <= 0) {
+                System.out.println("Invalid Input!");
+                continue;
+            }
+
+            // Determine which menu option to choose, skipping 5 as that will exit the loop
+            switch (userChoice) {
+                case 1 -> System.out.println("Number of vowels: " + userSentence.getNumberOfVowels());
+                case 2 -> System.out.println("Number of words: " + userSentence.getNumberOfWords());
+                case 3 -> {
+                    System.out.print("Enter a word to delete: ");
+                    final String stringToDelete = userInput.nextLine();
+                    userSentence.deleteByWord(stringToDelete);
+                }
+                case 4 -> {
+                    System.out.print("Enter a word number to delete: ");
+                    final int wordNumber = userInput.nextInt();
+                    userInput.nextLine();
+                    userSentence.deleteByWordNumber(wordNumber);
+                }
+            }
+        }
+
+
+    }
+}
+
+/**
+ * Helper Class to Process a String
+ */
+class StringToolkit {
+    public String value;
+    final private char SPACE_CHAR = ' ';
+
+    /**
+     * Set the string to value of StringToolkit Objet, removing excess spaces
+     * @param strValue The String to be manipulated
+     */
+    StringToolkit(String strValue) {
+        this.value = strValue;
+        removeExcessSpaces();
+    }
+
+    /**
+     * Removes extra spaces
+     */
+    private void removeExcessSpaces() {
+        this.value = this.value.trim();
+        for (int i = this.value.length() - 2; i > 0; i--) {
+            // Check if each character is a space and is surrounded also by spaces, meaning it is an excess space
+            if (this.value.charAt(i) != SPACE_CHAR || this.value.charAt(i - 1) != SPACE_CHAR) {
+                continue;
+            }
+            this.value = this.value.substring(0, i) + this.value.substring(i+1);
+        }
+    }
+
+    /**
+     * Get the number of words of <code>value</code>
+     * @return number of words
+     */
+    public int getNumberOfWords() {
+        int numberOfWords = 0;
+        for (int i = 0; i < this.value.length(); i++) {
+            if ((i == 0 || this.value.charAt(i - 1) == SPACE_CHAR)) {
+                numberOfWords++;
+            }
+        }
+        return numberOfWords;
+    }
+    /**
+     * Get the number of vowels in <code>value</code>
+     * @return number of vowels
+     */
+    public int getNumberOfVowels() {
+        int numberOfVowels = 0;
+        final String lowerCaseValue = this.value.toLowerCase();
+        for (int i = 0; i < this.value.length(); i++) {
+            switch (lowerCaseValue.charAt(i)) {
+                case 'a', 'e', 'i', 'o', 'u' -> numberOfVowels++;
+            }
+        }
+        return numberOfVowels;
+    }
+
+    /**
+     * Helper method to delete a part of the string in <code>value</code>
+     * @param startIndex Start Index, inclusive
+     * @param endIndex End Index, exclusive
+     */
+    public void deleteIndexes(int startIndex, int endIndex) {
+        this.value = this.value.substring(0, startIndex) + this.value.substring(endIndex);
+        this.value = this.value.trim();
+    }
+
+    /**
+     * Search for a word and delete it
+     * @param word word to be deleted
+     */
+    public void deleteByWord(String word) {
+        // Check if word is in sentence
+        if (this.value.indexOf(word) < 0) {
+            System.out.println("Word not in sentence.");
+            return;
+        }
+        // Check to prevent out-of-bounds when string is at the end of a sentence
+        if (this.value.length() - this.value.indexOf(word) - word.length() != 0) {
+            deleteIndexes(this.value.indexOf(word), this.value.indexOf(word) + word.length() + 1);
+        } else {
+            deleteIndexes(this.value.indexOf(word), this.value.indexOf(word) + word.length());
+        }
+    }
+
+    /**
+     * Delete a word based on its position in the sentence
+     * @param wordNumber Position of the word in sentence, starting from 1
+     */
+    public void deleteByWordNumber(int wordNumber) {
+        int numberOfWords = 0;
+        int beginIndex = 0, endIndex = 0;
+        // Check if the wordNumber is bigger than the total word count and terminate method
+        if (wordNumber > this.getNumberOfWords() || wordNumber <= 0) {
+            System.out.println("Invalid word number");
+            return;
+        }
+        // Loop through each character to count up the words
+        for (int i = 0; i < this.value.length(); i++) {
+            if ((i == 0 || this.value.charAt(i - 1) == SPACE_CHAR)) {
+                numberOfWords++;
+                // Set the starting index of the word to delete when the loop
+                // ends up on the first character of the word
+                if (numberOfWords == wordNumber) {
+                    beginIndex = i;
+                }
+            }
+
+            // Continue checking for last character if it is the correct word, otherwise skip
+            if (numberOfWords != wordNumber) {
+                continue;
+            }
+            // Remove the word, correct for the last index
+            if (i == this.value.length() - 1) {
+                endIndex = i + 1;
+            } else if (this.value.charAt(i + 1) == SPACE_CHAR) { // Extend to remove extra space in the middle of the word
+                endIndex = i + 2;
+            }
+        }
+        deleteIndexes(beginIndex,endIndex); // Run the deletion
+    }
+
+}
