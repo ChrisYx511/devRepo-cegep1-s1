@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62e976e5-8f32-498b-a623-b23ad9249e2f" name="Changes" comment="Oct5">
-      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/Assignment2-Answers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/src/dev/chrisyx511/cs1/Assignment2/Answer2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/src/dev/chrisyx511/cs1/Assignment2/Answer3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops3/Exercise8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/loops3/Exercise9.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/src/dev/chrisyx511/cs1/Assignment2/Answer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-10-07--Assignment2/src/dev/chrisyx511/cs1/Assignment2/Answer1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment 2/.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/DELIVERABLE 1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/MenuItems.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/ProductManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/ProductPurchase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/ProductStores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class-09-26--Loops1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Class-09-26--Loops1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class-09-28--Loops2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Class-09-28--Loops2/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Class-09-28--Loops2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Class-09-28--Loops2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +73,7 @@
       <updated>1696368080513</updated>
       <workItem from="1696368081530" duration="14833000" />
       <workItem from="1696722113880" duration="694000" />
+      <workItem from="1698953101106" duration="1229000" />
     </task>
     <task id="LOCAL-00001" summary="Oct5">
       <option name="closed" value="true" />

@@ -1,0 +1,376 @@
+/*
+    (Chris) Xi Yang
+    Mehdi Farshid Farzad
+    Introduction to Programming
+    4 November 2023
+
+    -- LIA Deliverable 1 --
+ */
+// ------------ Main.java ------------ //
+public class Main {
+    public static void main(String[] args) {
+        // Initialize ProductStores
+        ProductStores session = new ProductStores();
+
+        // Render the main menu //
+        Menu mainMenu = new Menu(MenuItems.menuTitle("Main Menu"), "Welcome to xyz shopping software!", MenuItems.listOfOptions(new String[]{
+                "Add / Remove Items",
+                "Buy Items",
+                "View Cart & Checkout",
+                "Exit"
+        }));
+        // Add the menu actions to the main menu, in order of the list.
+        // Notice the use of lambda functions, passed to MenuAction as method MenuAction.action()
+        mainMenu.menuActions.add(() -> System.out.println("This is where Add/Remove Items would run"));
+        mainMenu.menuActions.add(() -> ProductPurchase.openBuyPage(session));
+        mainMenu.menuActions.add(() -> ProductPurchase.openCartPage(session));
+        // Draw and handle the actions of the main menu
+        mainMenu.handleMenuOption(4);
+
+    }
+}
+
+// ------------ Menu.java ------------ //
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * Class to handle any given menu, creating the different pages of the application
+ */
+public class Menu {
+    // 3 main components of each page
+    String titleString;
+    String body;
+    String options;
+    /** Constructor to create new menu, <code>options</code> is optional
+     * @param titleString title of the menu
+     * @param body body of the menu
+     * @param options options of the menu, in <code>String</code> form
+     * */
+    Menu(String titleString, String body, String options) {
+        this.titleString = titleString;
+        this.body = body;
+        this.options = options;
+    }
+    /** Constructor to create new menu, <code>options</code> is optional
+     * @param titleString title of the menu
+     * @param body body of the menu
+     * */
+    Menu(String titleString, String body) {
+        this.titleString = titleString;
+        this.body = body;
+    }
+
+    /**
+     * Functional interface allowing methods to store methods as a MenuAction.action();
+     */
+    @FunctionalInterface
+    public interface MenuAction {
+        void action();
+    }
+
+    /**
+     * List of MenuAction interfaces, containing methods that can be executed later
+     */
+    public ArrayList<MenuAction> menuActions = new ArrayList<>();
+
+    /**
+     * Draw Menu using System.out.println()
+     */
+    public void draw() {
+        System.out.println(this.titleString);
+        System.out.println(this.body);
+        System.out.println(this.options);
+    }
+
+    /**
+     * Draws the menu and accept user inputted action, executing the action associated
+     * with the number.
+     * @param maxMenuOption the max integer that the user can input to make a choice, <code>maxMenuOption</code>
+     *                      must always be the exit option. Note that menu options count from 1.
+     */
+    public void handleMenuOption(int maxMenuOption) {
+        // Declare scanner and user menu option
+        final Scanner in = new Scanner(System.in);
+        int mainMenuSelection = 1;
+        while (mainMenuSelection != maxMenuOption) {
+            // Draw menu and options
+            this.draw();
+            System.out.print("Option: ");
+            // Accept user input mainMenuSelection
+            mainMenuSelection = in.nextInt();
+            in.nextLine();
+            // Check if menu options are valid
+            if (mainMenuSelection > maxMenuOption || mainMenuSelection <= 0) {
+                System.out.println("Invalid input");
+                continue;
+            } else if (mainMenuSelection == maxMenuOption) {
+                continue;
+            }
+            // Execute the MenuAction corresponding with the user choice
+            menuActions.get(mainMenuSelection - 1).action();
+        }
+    }
+
+}
+
+// ------------ MenuItems.java ------------ //
+import java.util.ArrayList;
+/** Reusable Text Elements that can be used throughout the application's menus */
+public class MenuItems {
+    /**
+     * Return a formatted title
+     * @param title title of the menu
+     * @return formatted text
+     */
+    public static String menuTitle(String title) {
+        return "------  " + title + "  ------";
+    }
+
+    /**
+     * Create a list of menu options from a String[]
+     * @param options <code>String[]</code> list of menu options
+     * @return String containing each option on a separate line, with the number in front
+     */
+    public static String listOfOptions(String[] options) {
+        StringBuilder optionStrings = new StringBuilder();
+        for (int i = 0; i < options.length; i++) {
+            optionStrings.append(i + 1).append("- ").append(options[i]).append('\n');
+        }
+        return optionStrings.toString();
+    }
+
+    /**
+     * Create a table of products, used in many menu pages
+     * @param listOfProducts list of products to be displayed
+     * @param useInventory display as Qty or as Inv (remaining inventory)
+     * @return String containing a formatted table of products
+     */
+    public static String productList(ArrayList<Product> listOfProducts, boolean useInventory) {
+        StringBuilder returnString;
+        // Change display if it's an inventory vs. a cart
+        if (useInventory) {
+            returnString = new StringBuilder("""
+                -- LIST OF ITEMS --
+                Index   Name                Inv     Price ($)
+                """);
+        } else {
+            returnString = new StringBuilder("""
+                -- LIST OF ITEMS --
+                Index   Name                Qty     Price ($)
+                """);
+        }
+
+        // Create lines to add to the table, padding the strings to be properly formatted with spaces
+        for (int i = 0; i < listOfProducts.size(); i++) {
+            StringBuilder productNameExpanded = new StringBuilder(listOfProducts.get(i).productName);
+            // Product name should be 20 characters
+            if (productNameExpanded.length() < 20) {
+                productNameExpanded.append(" ".repeat(Math.max(0, 20 - listOfProducts.get(i).productName.length())));
+            } else {
+                productNameExpanded = new StringBuilder(productNameExpanded.substring(0, 20));
+            }
+            // Index should be 8 characters
+            String indexString = Integer.toString(i);
+            indexString += (" ".repeat(Math.max(0, 8 - Integer.toString(i).length())));
+            // Append all content as a row of the table
+            returnString.append(indexString).append(productNameExpanded).append(listOfProducts.get(i).productQty).append("       ").append(listOfProducts.get(i).getFormattedPrice());
+            returnString.append('\n');
+        }
+        // Return the string
+        return returnString.toString();
+    }
+
+
+}
+// ------------ Product.java ------------ //
+import java.text.DecimalFormat;
+/** Defines the basic layout of an item in the store */
+public class Product {
+    //Key properties
+    String productName;
+    double productPrice;
+    int productQty;
+    // ID used to map between different lists
+    int productID;
+    // Initializing a product
+    Product(String name, double price, int qty) {
+        this.productName = name;
+        this.productPrice = price;
+        this.productQty = qty;
+    }
+
+    /**
+     * Return price always with 2 decimal positions
+     * @return <code>String</code> containing the price formatted to 2 decimals
+     */
+    public String getFormattedPrice() {
+        final DecimalFormat formatter = new DecimalFormat("#0.00");
+        return formatter.format(this.productPrice);
+    }
+}
+
+// ------------ ProductManagement.java ------------ //
+/** Used to add/remove inventory to the store */
+public class ProductManagement {
+    /**
+     * Open menu Add/Remove Products
+     * @param currentSession the ProductStore currently used so method can get cart and inventory
+     */
+    public static void openMgmtMenu(ProductStores currentSession) {
+
+    }
+
+    /**
+     * Add a product to the inventory
+     * @param currentSession the ProductStore currently used so method can get cart and inventory
+     */
+    public static void addProduct(ProductStores currentSession) {
+
+    }
+
+    /**
+     * Remove a product from the inventory, also removes it from user cart and reset product IDs for inventory and cart
+     * @param currentSession the ProductStore currently used so method can get cart and inventory
+     */
+    public static void removeProduct(ProductStores currentSession) {
+
+    }
+
+    /**
+     * Select a product and edit the inventory information
+     * @param currentSession the ProductStore currently used so method can get cart and inventory
+     */
+    public static void editInv(ProductStores currentSession) {
+
+    }
+}
+
+// ------------ ProductPurchase.java ------------ //
+
+/** Manages Buying, Show Cart, and Purchase Functions
+ */
+public class ProductPurchase {
+    /**
+     * Open the page to buy items, get user options and run <code>addItemToCart</code>
+     * @param currentSession the ProductStore currently used so method can get cart and inventory
+     */
+    public static void openBuyPage(ProductStores currentSession){
+        Menu buyPage = new Menu(MenuItems.menuTitle("Purchase Items"), MenuItems.productList(currentSession.availableInventory, true),
+                    MenuItems.listOfOptions(new String[] {
+                            "Add an item to cart",
+                            "Exit Purchase Items page"
+                    })
+                );
+        buyPage.menuActions.add(() -> ProductPurchase.addItemToCart(currentSession));
+        buyPage.handleMenuOption(2);
+    }
+
+    /**
+     * Add a selected index to cart from the inventory
+     * @param currentSession the ProductStore currently used so method can get cart and inventory
+     */
+    public static void addItemToCart(ProductStores currentSession) {
+        System.out.println("This would ask an item to add to the list!");
+        // this will accept the user choice
+        int chosenIndex = 1;
+        // how many the user adds to the cart
+        int qty = 1;
+        // Place the selected product in a variable
+        if (currentSession.cart.contains(ProductStores.getProductFromID(chosenIndex, currentSession.cart))) {
+
+        }
+        Product selectedProduct = currentSession.availableInventory.get(chosenIndex);
+        // Change the quantity to the amount to be added to the cart
+        selectedProduct.productQty = qty;
+        currentSession.cart.add(selectedProduct);
+    }
+
+    /**
+     * Remove an item from the cart
+     * @param currentSession the ProductStore currently used so method can get cart and inventory
+     */
+    public static void removeItemFromCart(ProductStores currentSession) {
+
+    }
+
+    /**
+     * Open the cart menu page
+     * @param currentSession the ProductStore currently used so method can get cart and inventory
+     */
+    public static void openCartPage(ProductStores currentSession) {
+        Menu cartPage = new Menu(MenuItems.menuTitle("Cart"), MenuItems.productList(currentSession.cart, false), MenuItems.listOfOptions(new String[]{
+                "Remove Item from Cart",
+                "Checkout",
+                "Exit",
+        }));
+        cartPage.menuActions.add(() -> removeItemFromCart(currentSession));
+        cartPage.menuActions.add(() -> processPurchase(currentSession));
+        cartPage.handleMenuOption(3);
+    }
+
+    /**
+     * Process the purchase and clear the cart, remove corresponding inventory quantities
+     * @param currentSession the ProductStore currently used so method can get cart and inventory
+     */
+    public static void processPurchase(ProductStores currentSession) {
+
+    }
+
+    /**
+     * Edit the qty of an item in the cart
+     * @param currentSession the ProductStore currently used so method can get cart and inventory
+     */
+    public static void editCartQty(ProductStores currentSession) {
+
+    }
+
+}
+
+// ------------ ProductStores.java ------------ //
+import java.util.ArrayList;
+
+/**
+ * Class containing basic data structures and methods used to store products for the session, Storage for the Products
+ */
+public class ProductStores {
+    /** Inventory <code>ArrayList</code>*/
+    ArrayList<Product> availableInventory = new ArrayList<>();
+    /** Cart <code>ArrayList</code>*/
+    ArrayList<Product> cart = new ArrayList<>();
+    /**
+     * Get a product from a given ID, return NULL if nothing is found
+     * @param id <code>productID</code> of the product
+     * @param arrayOfProducts <code>ArrayList</code>
+     * @return <code>Product</code> if found, <code>null</code> if not found
+     */
+    // This will allow one to associate products in the cart with the products in inventory
+    public static Product getProductFromID(int id, ArrayList<Product> arrayOfProducts) {
+        for (Product product : arrayOfProducts) {
+            if (product.productID == id) {
+                return product;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Add to inventory store, mapping the productID to the index of the inventory array
+     * @param itemToAdd <code>Product</code> to add
+     */
+    public void addInventoryItem(Product itemToAdd) {
+        itemToAdd.productID = availableInventory.size();
+        availableInventory.add(itemToAdd);
+    }
+
+    /**
+     * Update the product IDs of the inventory to match the index
+     */
+    // Used when an item is deleted from inventory
+    public void updateProductIDs() {
+        for (int i = 0; i < availableInventory.size(); i++) {
+            availableInventory.get(i).productID = i;
+        }
+    }
+
+}
