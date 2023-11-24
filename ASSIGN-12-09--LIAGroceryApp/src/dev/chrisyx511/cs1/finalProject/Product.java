@@ -15,6 +15,12 @@ public class Product {
         this.productPrice = price;
         this.productQty = qty;
     }
+    Product(String name, double price, int qty, int id) {
+        this.productName = name;
+        this.productPrice = price;
+        this.productQty = qty;
+        this.productID = id;
+    }
 
     /**
      * Return price always with 2 decimal positions

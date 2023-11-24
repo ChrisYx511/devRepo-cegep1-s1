@@ -66,5 +66,33 @@ public class MenuItems {
         return returnString.toString();
     }
 
+    public enum Colors {
+        BLACK,
+        RED,
+        GREEN,
+        YELLOW,
+        BLUE,
+        PURPLE,
+        CYAN
+    }
+
+
+
+    public static String returnColorString(String str, Colors clr, boolean highlight) {
+        int highlightDigit = 3;
+        if (highlight) {
+            highlightDigit = 4;
+        }
+        switch (clr) {
+            case RED -> {return "\u001B["+ highlightDigit +"1m" + str + "\u001B[0m";}
+            case BLACK -> {return "\u001B[" + highlightDigit + "0m" + str + "\u001B[0m";}
+            case GREEN -> {return "\u001B[" + highlightDigit + "2m" + str + "\u001B[0m";}
+            case YELLOW -> {return "\u001B[" + highlightDigit + "3m" + str + "\u001B[0m";}
+            case BLUE -> {return "\u001B[" + highlightDigit + "4m" + str + "\u001B[0m";}
+            case PURPLE -> {return "\u001B[" + highlightDigit + "5m" + str + "\u001B[0m";}
+            case CYAN -> {return "\u001B[" + highlightDigit + "6m" + str + "\u001B[0m";}
+        }
+        throw new RuntimeException("INVALID COLOR");
+    }
 
 }

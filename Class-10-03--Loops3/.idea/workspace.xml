@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62e976e5-8f32-498b-a623-b23ad9249e2f" name="Changes" comment="Oct5">
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-07/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-07/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-07/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-07/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-07/CLASS-11-07.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-07/src/dev/chrisyx511/cs1/romanNumerals/Day.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-07/src/dev/chrisyx511/cs1/romanNumerals/IntToRoman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-07/src/dev/chrisyx511/cs1/romanNumerals/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-07/src/dev/chrisyx511/cs1/romanNumerals/Season.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-07/src/dev/chrisyx511/cs1/romanNumerals/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-07/src/dev/chrisyx511/cs1/romanNumerals/WaterContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-11-18--Assignment4/ASSIGN-11-18--Assignment4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-11-18--Assignment4/Assignment4-Answers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-11-18--Assignment4/src/dev/chrisyx511/cs1/assignment4/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/DELIVERABLE 2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASS-11-14--ConstructorAndArrays/src/dev/chrisyx511/cs1/constructorsandarrays/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASS-11-14--ConstructorAndArrays/src/dev/chrisyx511/cs1/constructorsandarrays/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/DELIVERABLE 1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/DELIVERABLE 1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/MenuItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/MenuItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/ProductManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/ProductManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/ProductPurchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/ProductPurchase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/ProductStores.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/ProductStores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +75,7 @@
       <updated>1696368080513</updated>
       <workItem from="1696368081530" duration="14833000" />
       <workItem from="1696722113880" duration="694000" />
-      <workItem from="1698953101106" duration="1229000" />
+      <workItem from="1698953101106" duration="1827000" />
     </task>
     <task id="LOCAL-00001" summary="Oct5">
       <option name="closed" value="true" />

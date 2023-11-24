@@ -1,0 +1,301 @@
+package dev.chrisyx511.cs1.assignment4;
+
+/*
+    (Chris) Xi Yang
+    Mehdi Farshid Farzad
+    Introduction to Programming
+    18 November 2023
+
+    -- Assignment 4 --
+ */
+// Note: the ArrayList is only used for the menu options, and not for any of the calculations
+import java.util.ArrayList;
+
+import java.util.Scanner;
+public class Main {
+    // Initialize Scanner
+    final static Scanner in = new Scanner(System.in);
+    public static void main(String[] args) {
+        // Render Main Menu //
+        // ** Using Menu class that I made for LIA
+
+        Menu mainMenu = new Menu("", "Choose an option: ",
+                """
+                        1- Find Hexadecimal equivalent of an inputted binary number
+                        2- Find if an inputted number is Armstrong
+                        3- Find if two inputted numbers are Harshad
+                        4- Exit
+                        """);
+        mainMenu.menuActions.add(() -> hexNumberRoutine());
+        mainMenu.menuActions.add(() -> armstrongNumberRoutine());
+        mainMenu.menuActions.add(() -> harshadNumberRoutine());
+        mainMenu.handleMenuOption(4);
+    }
+
+    private static void armstrongNumberRoutine() {
+        // Routine to call the ArmstrongNumber class from the menu
+
+        System.out.print("Enter the number: ");
+        ArmstrongNumber userNumber = new ArmstrongNumber(in.nextInt());
+        if (userNumber.checkIfArmstrong()) {
+            System.out.println("This is an Armstrong Number");
+        } else {
+            System.out.println("This is not an Armstrong Number");
+        }
+    }
+
+    private static void hexNumberRoutine() {
+        // Routine to call the HexadecimalNumber class from the menu
+
+        System.out.print("Enter a binary number: ");
+        HexadecimalNumber userNum = new HexadecimalNumber(HexadecimalNumber.binaryToInt(in.nextLine()));
+        System.out.println("Hexadecimal equivalent: " + userNum.hex);
+    }
+
+    private static void harshadNumberRoutine() {
+        // Routine to call the HarshadNumber class from the menu
+
+        System.out.print("Enter 2 numbers: ");
+        HarshadNumber num1 = new HarshadNumber(in.nextInt());
+        HarshadNumber num2 = new HarshadNumber(in.nextInt());
+
+        // Check which of the numbers are Harshad, if it's a pair
+        if (num1.checkIfHarshad() && num2.checkIfHarshad()) {
+            System.out.println("Harshad pair.");
+        } else if (num1.checkIfHarshad()) {
+            System.out.println("Just " + num1.value + " is Harshad number.");
+        } else if (num2.checkIfHarshad()) {
+            System.out.println("Just " + num2.value + " is Harshad number.");
+        } else {
+            System.out.println("None of them are Harshad");
+        }
+    }
+
+
+}
+
+class ArmstrongNumber {
+    int value;
+
+    ArmstrongNumber(int value) {
+        this.value = value;
+    }
+
+    /**
+     * Check if the <code>value</code> of the instance is an Armstrong number. An Armstrong number
+     * is a number where the sum of every digit of that number, each raised to the power of the
+     * length of that number, is = number.
+     * @return <code>true</code> if it is Armstrong, <code>false</code> if not
+     */
+    boolean checkIfArmstrong() {
+        int i = value;
+        int length = getLengthOfInt();
+        int result = 0;
+        while (i > 0) {
+            // Raise each digit to the length
+            result += ArmstrongNumber.getPositiveExponent(i % 10, length);
+            i /= 10;
+        }
+
+        return (result == value);
+    }
+
+    /**
+     * Get length of int value
+     * @return length as integer
+     */
+    int getLengthOfInt() {
+        int i = value;
+        int length = 0;
+        while (i > 0) {
+            // Add 1 to length for each position of 10
+            length++;
+            i /= 10;
+        }
+        return length;
+    }
+
+    /**
+     * Calculate the result of a base raised to a certain exponent (a^b) using a loop for all positive integers
+     * @param base base of the exponentiation operation
+     * @param exponent exponent of the exponentiation operation
+     * @return result of base^exponent
+     */
+    static int getPositiveExponent(int base, int exponent) {
+        // Check for ^0
+        if (exponent == 0) {
+            return 1;
+        }
+        int result = base;
+        for (int i = 2; i <= exponent; i++) {
+            result = result * base;
+        }
+        return result;
+    }
+}
+
+class HarshadNumber {
+    int value;
+
+    HarshadNumber(int value) {
+        this.value = value;
+    }
+
+    /**
+     * Check if the <code>value</code> is a Harshad number, where the number is divisible
+     * by the sum of its digits
+     * @return <code>true</code> if is a Harshad number, <code>false</code> if it isn't
+     */
+    boolean checkIfHarshad() {
+        int i = value;
+        int sumOfDigits = 0;
+        while (i > 0) {
+            // Pull out each digit and add to sum
+            sumOfDigits += i % 10;
+            i /= 10;
+        }
+        return (value % sumOfDigits == 0);
+    }
+}
+
+class HexadecimalNumber {
+    int value;
+    String hex;
+    HexadecimalNumber(int value) {
+        this.value = value;
+        this.hex = HexadecimalNumber.getHexFromInt(value);
+    }
+
+    /**
+     * Convert from decimal <code>int</code> to hex <code>String</code>
+     * @param num decimal number to be converted
+     * @return <code>String</code> representing a hexadecimal number
+     */
+    static String getHexFromInt(int num) {
+        int i = num;
+        // Final string assembly
+        StringBuilder result = new StringBuilder();
+
+        while (num > 0) {
+            // Check for every package of 16
+            if (num % 16 < 10) {
+                result.insert(0, num % 16);
+            } else {
+                // Digit is represented by a letter rather than an actual numeric digit
+                switch (num % 16) {
+                    case 10 -> result.insert(0,"A");
+                    case 11 -> result.insert(0,"B");
+                    case 12 -> result.insert(0, "C");
+                    case 13 -> result.insert(0,"D");
+                    case 14 -> result.insert(0,"E");
+                    case 15 -> result.insert(0, "F");
+                }
+            }
+            num /= 16;
+        }
+        return result.toString();
+    }
+
+    /**
+     * Convert from a binary string to an integer
+     * @param binaryString <code>String</code> representing a binary number
+     * @return <code>int</code> value of binary
+     */
+    static int binaryToInt(String binaryString) {
+        binaryString = binaryString.trim();
+        int power = binaryString.length() - 1;
+        int result = 0;
+        for (int i =0; i< binaryString.length(); i++) {
+            if (binaryString.charAt(i) == '1') {
+                /* Using the ArmstrongNumber method to raise to the power of 2 corresponding to
+                 * the position of the character in the binary string
+                 */
+                result += ArmstrongNumber.getPositiveExponent(2, power);
+            }
+            power--;
+        }
+        return result;
+    }
+}
+
+// REUSED FROM LIA
+/**
+ * Class to handle any given menu, creating the different pages of the application
+ */
+class Menu {
+    // 3 main components of each page
+    String titleString;
+    String body;
+    String options;
+    /** Constructor to create new menu, <code>options</code> is optional
+     * @param titleString title of the menu
+     * @param body body of the menu
+     * @param options options of the menu, in <code>String</code> form
+     * */
+    Menu(String titleString, String body, String options) {
+        this.titleString = titleString;
+        this.body = body;
+        this.options = options;
+    }
+    /** Constructor to create new menu, <code>options</code> is optional
+     * @param titleString title of the menu
+     * @param body body of the menu
+     * */
+    Menu(String titleString, String body) {
+        this.titleString = titleString;
+        this.body = body;
+    }
+
+    /**
+     * Functional interface allowing methods to store methods as a MenuAction.action();
+     */
+    @FunctionalInterface
+    interface MenuAction {
+        void action();
+    }
+
+    /**
+     * List of MenuAction interfaces, containing methods that can be executed later
+     */
+    public ArrayList<MenuAction> menuActions = new ArrayList<>();
+
+    /**
+     * Draw Menu using System.out.println()
+     */
+    public void draw() {
+        System.out.println(this.titleString);
+        System.out.println(this.body);
+        System.out.println(this.options);
+    }
+
+    /**
+     * Draws the menu and accept user inputted action, executing the action associated
+     * with the number.
+     * @param maxMenuOption the max integer that the user can input to make a choice, <code>maxMenuOption</code>
+     *                      must always be the exit option. Note that menu options count from 1.
+     */
+    public void handleMenuOption(int maxMenuOption) {
+        // Declare scanner and user menu option
+        final Scanner in = new Scanner(System.in);
+        int mainMenuSelection = 1;
+        while (mainMenuSelection != maxMenuOption) {
+            // Draw menu and options
+            this.draw();
+            System.out.print("Option: ");
+            // Accept user input mainMenuSelection
+            mainMenuSelection = in.nextInt();
+            in.nextLine();
+            // Check if menu options are valid
+            if (mainMenuSelection > maxMenuOption || mainMenuSelection <= 0) {
+                System.out.println("Invalid input");
+                continue;
+            } else if (mainMenuSelection == maxMenuOption) {
+                continue;
+            }
+            // Execute the MenuAction corresponding with the user choice
+            menuActions.get(mainMenuSelection - 1).action();
+        }
+    }
+
+}
+

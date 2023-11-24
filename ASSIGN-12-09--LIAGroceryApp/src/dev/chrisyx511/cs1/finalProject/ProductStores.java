@@ -11,6 +11,10 @@ public class ProductStores {
     /** Cart <code>ArrayList</code>*/
     ArrayList<Product> cart = new ArrayList<>();
     /**
+     * Product IDs
+     */
+    int nextProductID = 0;
+    /**
      * Get a product from a given ID, return NULL if nothing is found
      * @param id <code>productID</code> of the product
      * @param arrayOfProducts <code>ArrayList</code>
@@ -23,7 +27,28 @@ public class ProductStores {
                 return product;
             }
         }
-        return null;
+        throw new RuntimeException("Product not in provided ArrayList");
+    }
+
+    public boolean productIsInCart(int id) {
+        for (Product product : cart) {
+            if (product.productID == id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void updateCartQty(int id, int addRemoveQty, boolean isAdd) {
+        Product product = ProductStores.getProductFromID(id, cart);
+        if (isAdd) {
+            product.productQty += addRemoveQty;
+            return;
+        }
+        if (product.productQty - addRemoveQty < 0) {
+            throw new RuntimeException("updateCartQty FAILED: QTY CANNOT BE SMALLER THAN 0");
+        }
+        product.productQty -= addRemoveQty;
     }
 
     /**
@@ -31,18 +56,9 @@ public class ProductStores {
      * @param itemToAdd <code>Product</code> to add
      */
     public void addInventoryItem(Product itemToAdd) {
-        itemToAdd.productID = availableInventory.size();
+        itemToAdd.productID = nextProductID;
         availableInventory.add(itemToAdd);
-    }
-
-    /**
-     * Update the product IDs of the inventory to match the index
-     */
-    // Used when an item is deleted from inventory
-    public void updateProductIDs() {
-        for (int i = 0; i < availableInventory.size(); i++) {
-            availableInventory.get(i).productID = i;
-        }
+        nextProductID++;
     }
 
 }
