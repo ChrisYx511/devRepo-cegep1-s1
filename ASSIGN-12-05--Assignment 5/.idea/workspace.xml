@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3ec8afe-57a1-4292-93b4-7c13afffc691" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ASSIGN-12-05--Assignment 5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment5-Answer.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment_5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/chrisyx511/cs1/assignment5/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-28--Arrays/CLASS-11-28--Arrays.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-28--Arrays/src/dev/chrisyx511/cs1/Arrays1/Question1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-28--Arrays/src/dev/chrisyx511/cs1/Arrays1/Question2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-28--Arrays/src/dev/chrisyx511/cs1/Arrays1/Question3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-28--Arrays/src/dev/chrisyx511/cs1/Arrays1/Question4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-28--Arrays/src/dev/chrisyx511/cs1/Arrays1/Question5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-28--Arrays/src/dev/chrisyx511/cs1/Arrays1/Question6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CLASS-11-28--Arrays/src/dev/chrisyx511/cs1/Arrays1/Question7.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/ProductPurchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGN-12-09--LIAGroceryApp/src/dev/chrisyx511/cs1/finalProject/ProductPurchase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Class-10-03--Loops3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Class-10-03--Loops3/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c3ec8afe-57a1-4292-93b4-7c13afffc691" name="Changes" comment="Assignment 5">
+      <change beforePath="$PROJECT_DIR$/Assignment5-Answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment5-Answer.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +21,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ChrisYx511"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="7c8a2a64-5aa1-448a-b894-c6cd47e65391" />
+        <option name="url" value="https://github.com/ChrisYx511/devRepo-cegep1-s1.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 0
@@ -81,8 +79,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701801021616</updated>
-      <workItem from="1701801022743" duration="2704000" />
+      <workItem from="1701801022743" duration="2731000" />
     </task>
+    <task id="LOCAL-00001" summary="Assignment 5">
+      <option name="closed" value="true" />
+      <created>1701803746947</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701803746947</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,5 +97,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Assignment 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 5" />
   </component>
 </project>
