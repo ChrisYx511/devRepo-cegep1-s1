@@ -67,13 +67,13 @@ public class ProductPurchase {
         int itemIndex = in.nextInt();
         in.nextLine();
         if (itemIndex > currentSession.cart.size() - 1|| itemIndex < 0) {
-            System.out.println("\n" + MenuItems.returnColorString("Invalid Selection!", MenuItems.Colors.YELLOW, false));
+            System.out.println(MenuItems.returnColorString("Invalid Selection!", MenuItems.Colors.YELLOW, false));
             return;
         }
         System.out.print("Are you sure (y/n)?");
         String confirm = in.nextLine();
         if (!confirm.equalsIgnoreCase( "y")) {
-            System.out.println("\n" + MenuItems.returnColorString("Aborted.", MenuItems.Colors.RED, false));
+            System.out.println(MenuItems.returnColorString("Aborted.", MenuItems.Colors.RED, false));
             return;
         }
         currentSession.cart.remove(itemIndex);
