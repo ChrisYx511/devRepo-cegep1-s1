@@ -9,7 +9,7 @@ public class MenuItems {
      * @return formatted text
      */
     public static String menuTitle(String title) {
-        return "------  " + title + "  ------";
+        return "\n------  " + title + "  ------";
     }
 
     /**
@@ -33,6 +33,9 @@ public class MenuItems {
      */
     public static String productList(ArrayList<Product> listOfProducts, boolean useInventory) {
         StringBuilder returnString;
+        if (listOfProducts.isEmpty()) {
+            return "|| -- NO ITEMS -- ||\n";
+        }
         // Change display if it's an inventory vs. a cart
         if (useInventory) {
             returnString = new StringBuilder("""
@@ -79,6 +82,7 @@ public class MenuItems {
 
 
     public static String returnColorString(String str, Colors clr, boolean highlight) {
+        // Renders the ASCII Codes required to display Strings in color
         int highlightDigit = 3;
         if (highlight) {
             highlightDigit = 4;

@@ -38,7 +38,7 @@ public class Menu {
         void action();
     }
     /**
-     * Functional interface allowing methods to store methods as a MenuAction.action();
+     * Functional interface allowing methods to store methods as a RefreshAction.action();
      */
     @FunctionalInterface
     public interface RefreshAction {

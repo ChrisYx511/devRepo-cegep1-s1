@@ -1,17 +1,10 @@
 package dev.chrisyx511.cs1.finalProject;
-/*
-TODO: Consistent Spacing between menu items
- */
+
 public class Main {
+    // Initialize ProductStores
     static ProductStores session = new ProductStores();
 
     public static void main(String[] args) {
-        // Initialize ProductStores
-        // TEMPORARY - Test Items
-        session.addInventoryItem(new Product("Test", 20.00, 5));
-        session.addInventoryItem(new Product("Test1", 20.00, 5));
-        session.availableInventory.remove(0);
-        session.addInventoryItem(new Product("Test2", 20.00, 5));
         // Render the main menu //
         Menu mainMenu = new Menu(MenuItems.menuTitle("Main Menu"), "Welcome to xyz shopping software!", MenuItems.listOfOptions(new String[]{
                 "Add / Remove Items",

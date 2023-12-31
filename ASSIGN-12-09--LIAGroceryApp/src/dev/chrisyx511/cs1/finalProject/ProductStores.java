@@ -61,4 +61,12 @@ public class ProductStores {
         nextProductID++;
     }
 
+    public double getCartCost() {
+        double sum = 0;
+        for (Product p : cart) {
+            sum += p.productPrice * p.productQty;
+        }
+        return sum;
+    }
+
 }

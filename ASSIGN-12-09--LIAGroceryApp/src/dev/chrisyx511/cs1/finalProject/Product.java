@@ -30,4 +30,9 @@ public class Product {
         final DecimalFormat formatter = new DecimalFormat("#0.00");
         return formatter.format(this.productPrice);
     }
+
+    public static String formatPrice(double price) {
+        final DecimalFormat formatter = new DecimalFormat("#0.00");
+        return formatter.format(price);
+    }
 }
